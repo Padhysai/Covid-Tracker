@@ -1,21 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import DataTable from "./Datatable";
 import NewsItem from "./NewsItem";
+import { SampleNews } from "./SampleNews";
 
 function News(props) {
-  const [news, Setnews] = useState([]);
+  const [news, Setnews] = useState(SampleNews);
 
-  useEffect(() => {
-    fetch(
-      "https://newsapi.org/v2/everything?q=covid 19&sortBy=popularity&apiKey=4fdd8d3e017f4c63af79458698f87d05"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        Setnews(data.articles);
-        console.log(data);
-      })
-      .catch((err) => console.log("Error While fetching News", err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://api.currentsapi.services/v1/search?keywords=covid19", {
+  //     method: "GET",
+  //     headers: {
+  //       authorization: "****",
+  //     },
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       Setnews(data.news);
+  //       console.log(data);
+  //     })
+  //     .catch((err) => console.log("Error While fetching News", err));
+  // }, []);
 
   return (
     <div className="container">
