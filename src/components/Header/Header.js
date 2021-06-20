@@ -8,7 +8,7 @@ function Header(props) {
         <div class="row">
           <div className="col-xl-12">
             <nav class="navbar">
-              <a class="navbar-brand" href="/">
+              <a class="navbar-brand" href="/Covid-Tracker">
                 <img
                   src={Logo}
                   alt=""

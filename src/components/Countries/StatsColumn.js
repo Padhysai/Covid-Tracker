@@ -14,7 +14,7 @@ function StatsColumn(props) {
       </h5>
       <ul className="country-list">
         {Countries.map((country) => (
-          <li className="country-list-items">
+          <li key={country.name} className="country-list-items">
             <span>
               <img src={country.countryInfo.flag} width="30" alt="flag"></img>
             </span>

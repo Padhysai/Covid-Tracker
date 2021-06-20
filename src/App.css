@@ -1,6 +1,30 @@
 .card{
     border: none !important;
 }
+.card-header{
+  background-color: #fff !important;
+}
+td, .card-text{
+  font-size: 14px;
+}
+.card-scroll{
+  height: 500px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.card-scroll::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+hr {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 .header{
     padding: 0px 0px;
     position: fixed;

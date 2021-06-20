@@ -4,6 +4,8 @@ import Header from "./components/Header/Header";
 import Stats from "./components/Stats/Stats";
 import CasesProvider from "./store/CasesProvider";
 import CountriesStats from "./components/Countries/CountriesStats";
+import News from "./components/News/News";
+import Footer from "./components/Footer";
 import "leaflet/dist/leaflet.css";
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
       <Header />
       <Stats />
       <CountriesStats />
+      <News />
+      <Footer />
     </CasesProvider>
   );
 }

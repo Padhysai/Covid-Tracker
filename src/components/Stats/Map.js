@@ -6,11 +6,12 @@ function Map(props) {
   const showDataOnmap = (data) =>
     data.map((country) => (
       <Circle
+        key={country.name}
         center={[country.countryInfo.lat, country.countryInfo.long]}
         color="#CC1034"
         fillColor="#CC1034"
         fillOpacity={0.4}
-        radius={Math.sqrt(country.cases) * 100}
+        radius={Math.min(Math.sqrt(country.cases) * 100, 586500)}
       >
         <Popup>
           <div className="info-container">

@@ -55,9 +55,10 @@ function CasesProvider(props) {
   };
 
   const sortedCountries = (key) => {
-    return CountryCases.sort((a, b) =>
-      a[key] < b[key] ? 1 : b[key] < a[key] ? -1 : 0
-    ).slice(0, 10);
+    const countries = [...CountryCases];
+    return countries
+      .sort((a, b) => (a[key] < b[key] ? 1 : b[key] < a[key] ? -1 : 0))
+      .slice(0, 10);
   };
 
   const casesContext = {

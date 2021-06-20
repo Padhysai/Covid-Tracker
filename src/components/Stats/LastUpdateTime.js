@@ -14,10 +14,10 @@ function LastUpdateTime(props) {
       </div>
       <div className="col-md-2 mb-3">
         <form onChange={(e) => ctx.oncountryChange(e.target.value)}>
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm form-select">
             <option>worldwide</option>
             {ctx.AllCountries.map((country) => (
-              <option>{country.name}</option>
+              <option key={country.name}>{country.name}</option>
             ))}
           </select>
         </form>
